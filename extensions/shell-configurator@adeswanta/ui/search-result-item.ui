@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<interface>
+  <requires lib="gtk+" version="3.24"/>
+  <template class="SearchResultItem" parent="GtkBox">
+    <property name="visible">True</property>
+    <property name="can-focus">True</property>
+    <property name="valign">center</property>
+    <property name="width-request">560</property>
+    <property name="margin-start">12</property>
+    <property name="margin-end">12</property>
+    <property name="margin-top">8</property>
+    <property name="margin-bottom">8</property>
+    <property name="spacing">16</property>
+    <child>
+      <object class="GtkBox">
+        <property name="visible">True</property>
+        <property name="orientation">vertical</property>
+        <property name="hexpand">True</property>
+        <property name="spacing">4</property>
+        <child>
+          <object class="GtkLabel" id="configName">
+            <property name="visible">True</property>
+            <property name="can-focus">False</property>
+            <property name="halign">start</property>
+            <property name="hexpand">True</property>
+            <property name="label" translatable="no">Option Name</property>
+          </object>
+        </child>
+        <child>
+          <object class="GtkLabel" id="configLocation">
+            <property name="visible">True</property>
+            <property name="can-focus">False</property>
+            <property name="halign">start</property>
+            <property name="hexpand">True</property>
+            <property name="label" translatable="no">Page → Item</property>
+            <attributes>
+              <attribute name="absolute-size" value="12288"/>
+              <attribute name="foreground" value="#808080"/>
+            </attributes>
+          </object>
+        </child>
+      </object>
+    </child>
+    <!-- Supporting Icon -->
+    <child>
+      <object class="GtkImage">
+        <property name="visible">True</property>
+        <property name="icon_name">go-next-symbolic</property>
+      </object>
+    </child>
+  </template>
+</interface>

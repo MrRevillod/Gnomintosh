@@ -1,0 +1,75 @@
+{
+  "name": "Default",
+  "configs": {
+    "main": {
+      "animation-speed": 1,
+      "startup-state": "OVERVIEW"
+    },
+    "panel": {
+      "visibility": true,
+      "auto-hide": false,
+      "show-on-overview": false,
+      "elements": {
+        "activities-button-visibility": true,
+        "app-menu-visibility": true,
+        "date-time-menu-visibility": true,
+        "keyboard-layout-menu-visibility": true,
+        "accessibility-menu-visibility": true,
+        "system-menu-visibility": true
+      },
+      "height": 32,
+      "position": "TOP"
+    },
+    "dash": {
+      "visibility": true,
+      "separator-visibility": true,
+      "icon-size": "AUTO",
+      "application-button": {
+        "visibility": true,
+        "position": "END"
+      }
+    },
+    "overview": {
+      "static-desktop-background": false
+    },
+    "workspace": {
+      "background-visibility": true,
+      "background-uniform-scale": false,
+      "switcher-visibility": true,
+      "switcher-always-show": false,
+      "switcher-static-background": false,
+      "switcher-peak-width": -1,
+      "switcher-scale-size": 5,
+      "wraparound-switching": false,
+      "background-border-radius": -1
+    },
+    "search": {
+      "visibility": true,
+      "type-to-search": true
+    },
+    "appGrid": {
+      "rows": 3,
+      "columns": 8,
+      "double-super": true
+    },
+    "lookingGlass": {
+      "horizontal-position": 50,
+      "vertical-position": "TOP",
+      "width": 640,
+      "height": 480
+    },
+    "notification": {
+      "banner-horizontal-position": "CENTER",
+      "banner-vertical-position": "TOP",
+      "margin": 0,
+      "timeout": 0
+    },
+    "osd": {
+      "horizontal-position": "CENTER",
+      "vertical-position": "BOTTOM"
+    },
+    "screenshot": {
+      "dialog-vertical-position": "BOTTOM"
+    }
+  }
+}

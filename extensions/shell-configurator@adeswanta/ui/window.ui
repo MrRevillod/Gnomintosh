@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<interface>
+  <requires lib="gtk+" version="3.24"/>
+
+  <!-- Headerbar (for GNOME 41 below) -->
+  <object class="GtkHeaderBar" id="headerBar">
+    <property name="visible">True</property>
+    <property name="can-focus">True</property>
+    <property name="hexpand">True</property>
+    <child>
+      <object class="GtkToggleButton" id="searchButton">
+        <property name="visible">True</property>
+        <property name="can-focus">False</property>
+        <property name="receives-default">True</property>
+        <property name="tooltip-text" translatable="yes">Search configurations</property>
+        <child>
+          <object class="GtkImage">
+            <property name="visible">True</property>
+            <property name="can-focus">False</property>
+            <property name="icon-name">system-search-symbolic</property>
+          </object>
+        </child>
+      </object>
+    </child>
+  </object>
+
+  <!-- Stack Switcher - Title widget -->
+  <object class="GtkStackSwitcher" id="stackSwitcher">
+    <property name="visible">True</property>
+    <property name="can-focus">True</property>
+    <property name="halign">center</property>
+  </object>
+
+  <!-- Window content (for GNOME 41 below only) -->
+  <object class="GtkBox" id="windowContent">
+    <property name="visible">True</property>
+    <property name="can-focus">True</property>
+    <property name="orientation">vertical</property>
+    <child>
+      <object class="GtkSearchBar" id="searchBar">
+        <property name="visible">True</property>
+        <property name="can-focus">True</property>
+        <property name="hexpand">True</property>
+        <child>
+          <object class="GtkSearchEntry" id="searchEntry">
+            <property name="can-focus">True</property>
+            <property name="visible">True</property>
+            <property name="width-request">480</property>
+          </object>
+        </child>
+      </object>
+    </child>
+    <child>
+      <object class="GtkStack" id="mainStack">
+        <property name="visible">True</property>
+        <property name="can-focus">True</property>
+        <property name="transition-type">crossfade</property>
+        <property name="vexpand">True</property>
+      </object>
+    </child>
+  </object>
+
+  <object class="GtkStack" id="contentStack">
+    <property name="visible">True</property>
+    <property name="can-focus">True</property>
+    <property name="transition-type">crossfade</property>
+  </object>
+
+</interface>

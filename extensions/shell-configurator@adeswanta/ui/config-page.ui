@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<interface>
+  <requires lib="gtk+" version="3.24"/>
+  <object class="GtkScrolledWindow" id="configPage">
+    <property name="visible">True</property>
+    <property name="can-focus">True</property>
+    <property name="hscrollbar-policy">never</property>
+    <child>
+      <object class="GtkViewport" id="configPageView">
+        <property name="visible">True</property>
+        <property name="can-focus">True</property>
+        <!-- <property name="scroll-to-focus">True</property> -->
+        <child>
+          <object class="GtkBox">
+            <property name="visible">True</property>
+            <property name="orientation">vertical</property>
+            <property name="spacing">24</property>
+            <property name="margin-top">24</property>
+            <property name="margin-bottom">24</property>
+            <property name="margin-start">24</property>
+            <property name="margin-end">24</property>
+            <child>
+              <object class="GtkBox">
+                <property name="visible">True</property>
+                <property name="orientation">horizontal</property>
+                <property name="halign">center</property>
+                <property name="spacing">8</property>
+                <property name="width-request">560</property>
+                <child>
+                  <object class="GtkLabel">
+                    <property name="visible">True</property>
+                    <property name="can-focus">True</property>
+                    <property name="label" translatable="yes">Configuration Preset:</property>
+                  </object>
+                </child>
+                <child>
+                  <object class="GtkComboBoxText" id="presetCombo">
+                    <property name="visible">True</property>
+                    <property name="can-focus">True</property>
+                    <property name="hexpand">true</property>
+                    <property name="active">0</property>
+                  </object>
+                </child>
+              </object>
+            </child>
+            <child>
+              <object class="GtkBox" id="modules">
+                <property name="visible">True</property>
+                <property name="orientation">vertical</property>
+                <property name="halign">center</property>
+                <property name="spacing">32</property>
+                <child></child>
+              </object>
+            </child>
+          </object>
+        </child>
+      </object>
+    </child>
+  </object>
+</interface>

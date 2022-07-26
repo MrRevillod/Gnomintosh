@@ -1,0 +1,54 @@
+{
+  "main-startup-state": {
+    "DESKTOP": 0,
+    "OVERVIEW": 1,
+    "APP_GRID": 2
+  },
+  "panel-position": {
+    "TOP": 0,
+    "BOTTOM": 1
+  },
+  "dash-icon-size": {
+    "AUTO": 0,
+    "TINY": 1,
+    "SMALLER": 2,
+    "SMALL": 3,
+    "MEDIUM_SMALL": 4,
+    "MEDIUM": 5,
+    "LARGE": 6,
+    "LARGER": 7,
+    "BIGGER": 8,
+    "HUGE": 9
+  },
+  "dash-application-button-position": {
+    "START": 0,
+    "END": 1
+  },
+  "lookingglass-vertical-position": {
+    "TOP": 0,
+    "BOTTOM": 1
+  },
+  "notification-banner-horizontal-position": {
+    "START": 0,
+    "CENTER": 1,
+    "END": 2
+  },
+  "notification-banner-vertical-position": {
+    "TOP": 0,
+    "BOTTOM": 1
+  },
+  "osd-horizontal-position": {
+    "START": 0,
+    "CENTER": 1,
+    "END": 2
+  },
+  "osd-vertical-position": {
+    "TOP": 0,
+    "CENTER": 1,
+    "BOTTOM": 2
+  },
+  "screenshot-dialog-vertical-position": {
+    "TOP": 0,
+    "BOTTOM": 1
+  }
+}

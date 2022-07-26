@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<interface>
+  <requires lib="gtk+" version="3.24"/>
+  <template class="ModuleSection" parent="GtkBox">
+    <property name="visible">True</property>
+    <property name="can-focus">True</property>
+    <property name="spacing">12</property>
+    <property name="orientation">vertical</property>
+    <child>
+      <object class="GtkBox">
+        <property name="visible">True</property>
+        <property name="can-focus">True</property>
+        <property name="orientation">vertical</property>
+        <property name="spacing">4</property>
+        <child>
+          <object class="GtkLabel" id="moduleTitle">
+            <property name="visible">True</property>
+            <property name="can-focus">False</property>
+            <property name="halign">start</property>
+            <property name="label" translatable="no">Category Name</property>
+            <attributes>
+              <attribute name="weight" value="bold"/>
+            </attributes>
+          </object>
+        </child>
+        <child>
+          <object class="GtkLabel" id="moduleDescription">
+            <property name="visible">True</property>
+            <property name="can-focus">False</property>
+            <property name="halign">start</property>
+            <property name="label" translatable="no">Category Decsription</property>
+            <property name="wrap">True</property>
+            <property name="xalign">0</property>
+          </object>
+        </child>
+      </object>
+    </child>
+    <child>
+      <object class="GtkFrame">
+        <property name="visible">True</property>
+        <property name="can-focus">True</property>
+        <property name="label-xalign">0</property>
+        <child>
+          <object class="GtkListBox" id="configs">
+            <property name="visible">True</property>
+            <property name="can-focus">True</property>
+            <property name="selection-mode">none</property>
+            <property name="activate-on-single-click">False</property>
+          </object>
+        </child>
+        <child type="label_item"></child>
+      </object>
+    </child>
+  </template>
+</interface>

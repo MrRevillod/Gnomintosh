@@ -1,0 +1,320 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schemalist>
+  <!-- Enums -->
+  <enum id="org.gnome.shell.extensions.shell-configurator.main-startup-state">
+    <value value="0" nick="DESKTOP"/>
+    <value value="1" nick="OVERVIEW"/>
+    <value value="2" nick="APP_GRID"/>
+  </enum>
+
+  <enum id="org.gnome.shell.extensions.shell-configurator.panel-position">
+    <value value="0" nick="TOP"/>
+    <value value="1" nick="BOTTOM"/>
+  </enum>
+
+  <enum id="org.gnome.shell.extensions.shell-configurator.dash-icon-size">
+    <value value="0" nick="AUTO"/>
+    <value value="1" nick="TINY"/>
+    <value value="2" nick="SMALLER"/>
+    <value value="3" nick="SMALL"/>
+    <value value="4" nick="MEDIUM_SMALL"/>
+    <value value="5" nick="MEDIUM"/>
+    <value value="6" nick="LARGE"/>
+    <value value="7" nick="LARGER"/>
+    <value value="8" nick="BIGGER"/>
+    <value value="9" nick="HUGE"/>
+  </enum>
+  <enum id="org.gnome.shell.extensions.shell-configurator.dash-application-button-position">
+    <value value="0" nick="START"/>
+    <value value="1" nick="END"/>
+  </enum>
+
+  <enum id="org.gnome.shell.extensions.shell-configurator.lookingglass-vertical-position">
+    <value value="0" nick="TOP"/>
+    <value value="1" nick="BOTTOM"/>
+  </enum>
+
+  <enum id="org.gnome.shell.extensions.shell-configurator.notification-banner-horizontal-position">
+    <value value="0" nick="START"/>
+    <value value="1" nick="CENTER"/>
+    <value value="2" nick="END"/>
+  </enum>
+  <enum id="org.gnome.shell.extensions.shell-configurator.notification-banner-vertical-position">
+    <value value="0" nick="TOP"/>
+    <value value="1" nick="BOTTOM"/>
+  </enum>
+
+  <enum id="org.gnome.shell.extensions.shell-configurator.osd-horizontal-position">
+    <value value="0" nick="START"/>
+    <value value="1" nick="CENTER"/>
+    <value value="2" nick="END"/>
+  </enum>
+  <enum id="org.gnome.shell.extensions.shell-configurator.osd-vertical-position">
+    <value value="0" nick="TOP"/>
+    <value value="1" nick="CENTER"/>
+    <value value="2" nick="BOTTOM"/>
+  </enum>
+
+  <enum id="org.gnome.shell.extensions.shell-configurator.screenshot-dialog-vertical-position">
+    <value value="0" nick="TOP"/>
+    <value value="1" nick="BOTTOM"/>
+  </enum>
+
+
+  <schema id="org.gnome.shell.extensions.shell-configurator"
+  path="/org/gnome/shell/extensions/shell-configurator/">
+    <!-- Main -->
+    <key type="d" name="main-animation-speed">
+      <default>1</default>
+      <range min="0" max="4"/>
+      <summary>Main: Animation Speed</summary>
+      <description>Shell animation speed factor</description>
+    </key>
+    <key name="main-startup-state" enum="org.gnome.shell.extensions.shell-configurator.main-startup-state">
+      <default>'OVERVIEW'</default>
+      <summary>Main: Startup State</summary>
+      <description>Shell startup state when session logged in</description>
+    </key>
+
+    <!-- Panel -->
+    <key type="b" name="panel-visibility">
+      <default>true</default>
+      <summary>Panel Visibility</summary>
+      <description>Show/Hide the panel</description>
+    </key>
+    <key type="b" name="panel-auto-hide">
+      <default>false</default>
+      <summary>Panel Auto Hide</summary>
+      <description>Automatically hides the panel and show when cursor entered the panel</description>
+    </key>
+    <key type="b" name="panel-show-on-overview">
+      <default>false</default>
+      <summary>Show panel on overview</summary>
+      <description>When panel hiding, panel will be shown on overview</description>
+    </key>
+    <key type="i" name="panel-height">
+      <default>32</default>
+      <range min="0" max="128"/>
+      <summary>Panel Height</summary>
+      <description>Height size of the panel</description>
+    </key>
+    <key name="panel-position" enum="org.gnome.shell.extensions.shell-configurator.panel-position">
+      <default>'TOP'</default>
+      <summary>Panel Position</summary>
+      <description>Move the panel position in vertical</description>
+    </key>
+    <key type="b" name="panel-elements-activities-button-visibility">
+      <default>true</default>
+      <summary>Panel Elements: Activities Button</summary>
+      <description>A button to enter to activities overview</description>
+    </key>
+    <key type="b" name="panel-elements-app-menu-visibility">
+      <default>true</default>
+      <summary>Panel Elements: App Menu</summary>
+      <description>Application name indicator with menu of focused window</description>
+    </key>
+    <key type="b" name="panel-elements-date-time-menu-visibility">
+      <default>true</default>
+      <summary>Panel Elements: Date Time Menu</summary>
+      <description>Showing date and time"</description>
+    </key>
+    <key type="b" name="panel-elements-keyboard-layout-menu-visibility">
+      <default>true</default>
+      <summary>Panel Elements: Keyboard Layout</summary>
+      <description>Keyboard layout menu indicator and switching</description>
+    </key>
+    <key type="b" name="panel-elements-accessibility-menu-visibility">
+      <default>true</default>
+      <summary>Panel Elements: Accessibility Menu</summary>
+      <description>An accessibility indicator</description>
+    </key>
+    <key type="b" name="panel-elements-system-menu-visibility">
+      <default>true</default>
+      <summary>Panel Elements: System Menu (Aggregate Menu)</summary>
+      <description>A system menu showing power, volume, and network indicator</description>
+    </key>
+
+    <!-- Dash -->
+    <key type="b" name="dash-visibility">
+      <default>true</default>
+      <summary>Dash Visibility</summary>
+      <description>Show/Hide Dash</description>
+    </key>
+    <key type="b" name="dash-separator-visibility">
+      <default>true</default>
+      <summary>Dash Separator Visibility</summary>
+      <description>Show/Hide Dash separator that separates the favorite and running apps (GNOME 40 above only)</description>
+    </key>
+    <key name="dash-icon-size" enum="org.gnome.shell.extensions.shell-configurator.dash-icon-size">
+      <default>'AUTO'</default>
+      <summary>Dash Icon Size</summary>
+      <description>Fixed dash icon size. NOTE: when icon size is set to Auto, you need restart gnome-shell to make changes</description>
+    </key>
+    <key type="b" name="dash-application-button-visibility">
+      <default>true</default>
+      <summary>Dash Application Button Visibility</summary>
+      <description>Show/Hide Application Button</description>
+    </key>
+    <key name="dash-application-button-position" enum="org.gnome.shell.extensions.shell-configurator.dash-application-button-position">
+      <default>'END'</default>
+      <summary>Dash Application Button Position</summary>
+      <description>Application Button Position either on top/left or bottom/right</description>
+    </key>
+
+    <!-- Overview -->
+    <key type="b" name="overview-static-desktop-background">
+      <default>false</default>
+      <summary>Static Desktop Background on Overview</summary>
+      <description>Set overview background to desktop background</description>
+    </key>
+
+    <!-- Workspace -->
+    <key type="b" name="workspace-background-visibility">
+      <default>true</default>
+      <summary>Workspace Background Visibility</summary>
+      <description>Show/Hide Workspace background visibility and disable workspace scaling (GNOME 40 above only)</description>
+    </key>
+    <key type="b" name="workspace-background-uniform-scale">
+      <default>false</default>
+      <summary>Keep Workspaces Background Scale Size</summary>
+      <description>Set the scale size of background workspaces to the same size as current workspace (GNOME 40 above only)</description>
+    </key>
+    <key type="b" name="workspace-switcher-visibility">
+      <default>true</default>
+      <summary>Workspace Switcher Visibility</summary>
+      <description>Show/Hide Workspace switcher on the right/top of overview</description>
+    </key>
+    <key type="b" name="workspace-switcher-always-show">
+      <default>false</default>
+      <summary>Always Show Workspace Switcher</summary>
+      <description>Always show the workspace switcher when there's only single workspace (GNOME 40 above only)</description>
+    </key>
+    <key type="b" name="workspace-switcher-static-background">
+      <default>false</default>
+      <summary>Static Background on Workspace Switcher</summary>
+      <description>Restore workspace switcher static background (GNOME 40 above only)</description>
+    </key>
+    <key type="i" name="workspace-switcher-peak-width">
+      <default>-1</default>
+      <range min="-1" max="96"/>
+      <summary>Workspace Switcher Peak Width</summary>
+      <description>Peak width size of Workspace Switcher when it's in idle state (GNOME 3.38 below only)</description>
+    </key>
+    <key type="i" name="workspace-switcher-scale-size">
+      <default>5</default>
+      <range min="0" max="10"/>
+      <summary>Workspace Switcher Scale Size</summary>
+      <description>Maximum scale size of Workspace Switcher on the top of overview (GNOME 40 above only)</description>
+    </key>
+    <key type="b" name="workspace-wraparound-switching">
+      <default>false</default>
+      <summary>Wraparound Workspace Switching</summary>
+      <description>Enable wraparound switching of workspaces</description>
+    </key>
+    <key type="i" name="workspace-background-border-radius">
+      <default>-1</default>
+      <range min="-1" max="64"/>
+      <summary>Workspace Switcher Scale Size</summary>
+      <description>Maximum scale size of Workspace Switcher on the top of overview (GNOME 40 above only)</description>
+    </key>
+
+    <!-- Search -->
+    <key type="b" name="search-visibility">
+      <default>true</default>
+      <summary>Search Entry Visibility</summary>
+      <description>Show/Hide search entry on the top of overview</description>
+    </key>
+    <key type="b" name="search-type-to-search">
+      <default>true</default>
+      <summary>Type to search behavior</summary>
+      <description>Triggers start search when user type on overview</description>
+    </key>
+
+    <!-- App Grid -->
+    <key type="i" name="appgrid-rows">
+      <default>3</default>
+      <range min="2" max="12"/>
+      <summary>App Grid Row Page</summary>
+      <description>Row page size of App Grid</description>
+    </key>
+    <key type="i" name="appgrid-columns">
+      <default>8</default>
+      <range min="2" max="12"/>
+      <summary>App Grid Column Page</summary>
+      <description>Column page size of App Grid</description>
+    </key>
+    <key type="b" name="appgrid-double-super">
+      <default>true</default>
+      <summary>Double super to App Grid</summary>
+      <description>Enable double press super key to App Grid (GNOME 40 above only)</description>
+    </key>
+
+    <!-- Looking Glass -->
+    <key type="i" name="lookingglass-horizontal-position">
+      <default>50</default>
+      <range min="0" max="100"/>
+      <summary>Looking Glass Horizontal Position</summary>
+      <description>Horizontal position of Looking Glass in percentage value</description>
+    </key>
+    <key name="lookingglass-vertical-position" enum="org.gnome.shell.extensions.shell-configurator.lookingglass-vertical-position">
+      <default>'TOP'</default>
+      <summary>Looking Glass Vertical Position</summary>
+      <description>Vertical position of Looking Glass</description>
+    </key>
+    <key type="i" name="lookingglass-width">
+      <default>640</default>
+      <range min="20" max="2048"/>
+      <summary>Looking Glass Width</summary>
+      <description>Width size of Looking Glass</description>
+    </key>
+    <key type="i" name="lookingglass-height">
+      <default>480</default>
+      <range min="20" max="2048"/>
+      <summary>Looking Glass Height</summary>
+      <description>Height size of Looking Glass</description>
+    </key>
+
+    <!-- Notification -->
+    <key name="notification-banner-horizontal-position" enum="org.gnome.shell.extensions.shell-configurator.notification-banner-horizontal-position">
+      <default>'CENTER'</default>
+      <summary>Notification Banner Horizontal Position</summary>
+      <description>Move the notification banner position in horizontal</description>
+    </key>
+    <key name="notification-banner-vertical-position" enum="org.gnome.shell.extensions.shell-configurator.notification-banner-vertical-position">
+      <default>'TOP'</default>
+      <summary>Notification Banner Vertical Position</summary>
+      <description>Move the notification banner position in vertical</description>
+    </key>
+    <key type="i" name="notification-margin">
+      <default>0</default>
+      <range min="0" max="64"/>
+      <summary>Notification banner margin</summary>
+      <description>Padding size of notification banner</description>
+    </key>
+    <key type="i" name="notification-timeout">
+      <default>0</default>
+      <range min="0" max="60"/>
+      <summary>Notification show timeout (in second)</summary>
+      <description>Show timeout after user triggering and idle</description>
+    </key>
+
+    <!-- OSD -->
+    <key name="osd-horizontal-position" enum="org.gnome.shell.extensions.shell-configurator.osd-horizontal-position">
+      <default>'CENTER'</default>
+      <summary>Notification Banner Horizontal Position</summary>
+      <description>Move the osd position in horizontal</description>
+    </key>
+    <key name="osd-vertical-position" enum="org.gnome.shell.extensions.shell-configurator.osd-vertical-position">
+      <default>'BOTTOM'</default>
+      <summary>Notification Banner Vertical Position</summary>
+      <description>Move the osd position in vertical</description>
+    </key>
+
+    <!-- Screenshot -->
+    <key name="screenshot-dialog-vertical-position" enum="org.gnome.shell.extensions.shell-configurator.screenshot-dialog-vertical-position">
+      <default>'BOTTOM'</default>
+      <summary>Screenshot Panel Vertical Position</summary>
+      <description>Screenshot panel position in vertical</description>
+    </key>
+  </schema>
+</schemalist>

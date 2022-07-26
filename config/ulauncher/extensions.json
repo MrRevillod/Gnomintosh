@@ -1,0 +1,16 @@
+{
+    "com.github.eckhoff42.ulauncher-favorite-directories": {
+        "id": "com.github.eckhoff42.ulauncher-favorite-directories",
+        "url": "https://github.com/Eckhoff42/Ulauncher-favorite-directories",
+        "updated_at": "2022-07-25T02:13:10.347873",
+        "last_commit": "2b26dacb955d0d6a17092dd8fd2671951594898a",
+        "last_commit_time": "2022-05-13T07:45:27"
+    },
+    "com.github.hippo-o-matic.ulauncher-qalc": {
+        "id": "com.github.hippo-o-matic.ulauncher-qalc",
+        "url": "https://github.com/hippo-o-matic/ulauncher-qalc",
+        "updated_at": "2022-07-25T02:15:10.526811",
+        "last_commit": "45882831f57c265ee3b4bf47cdb862379d47a89a",
+        "last_commit_time": "2021-03-03T03:33:36"
+    }
+}

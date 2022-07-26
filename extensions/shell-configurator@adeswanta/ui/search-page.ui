@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<interface>
+  <requires lib="gtk+" version="3.24"/>
+    <object class="GtkStack" id="searchPage">
+      <property name="visible">True</property>
+      <property name="can-focus">True</property>
+      <property name="vexpand">True</property>
+      <property name="transition-type">crossfade</property>
+    </object>
+    <!-- Available Configurations Page -->
+    <object class="GtkScrolledWindow" id="searchAvailable">
+      <property name="visible">True</property>
+      <property name="can-focus">True</property>
+      <property name="hscrollbar-policy">never</property>
+      <child>
+        <object class="GtkViewport">
+          <property name="visible">True</property>
+          <property name="can-focus">True</property>
+          <child>
+            <object class="GtkBox" id="searchResult">
+              <property name="visible">True</property>
+              <property name="orientation">vertical</property>
+              <property name="halign">center</property>
+              <property name="margin-top">24</property>
+              <property name="margin-bottom">24</property>
+              <property name="margin-start">24</property>
+              <property name="margin-end">24</property>
+              <property name="spacing">32</property>
+              <child>
+                <object class="GtkFrame">
+                  <property name="visible">True</property>
+                  <property name="can-focus">True</property>
+                  <property name="label-xalign">0</property>
+                  <child>
+                    <object class="GtkListBox" id="configResult">
+                      <property name="visible">True</property>
+                      <property name="can-focus">True</property>
+                    </object>
+                  </child>
+                </object>
+              </child>
+            </object>
+          </child>
+        </object>
+      </child>
+    </object>
+    <!-- Not found Page -->
+    <object class="GtkBox" id="searchNotFound">
+      <property name="visible">True</property>
+      <property name="orientation">vertical</property>
+      <property name="spacing">16</property>
+      <property name="valign">center</property>
+      <!-- Supporting Icon -->
+      <child>
+        <object class="GtkImage">
+          <property name="visible">True</property>
+          <property name="icon_name">system-search-symbolic</property>
+          <property name="pixel-size">96</property>
+        </object>
+      </child>
+      <child>
+        <object class="GtkBox">
+          <property name="visible">True</property>
+          <property name="orientation">vertical</property>
+          <property name="spacing">8</property>
+          <property name="valign">center</property>
+          <!-- Message -->
+          <child>
+            <object class="GtkLabel">
+              <property name="visible">True</property>
+              <property name="can-focus">True</property>
+              <property name="label" translatable="yes">No result found</property>
+              <attributes>
+                <attribute name="absolute-size" value="16384"/>
+              </attributes>
+              </object>
+          </child>
+        </object>
+      </child>
+    </object>
+  
+  
+</interface>

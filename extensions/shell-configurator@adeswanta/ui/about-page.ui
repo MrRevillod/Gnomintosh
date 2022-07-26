@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<interface>
+  <requires lib="gtk+" version="3.24"/>
+  <object class="GtkBox" id="aboutPage">
+    <property name="visible">True</property>
+    <property name="orientation">vertical</property>
+    <property name="margin-start">24</property>
+    <property name="margin-end">24</property>
+    <property name="spacing">24</property>
+    <property name="valign">center</property>
+    <child>
+      <object class="GtkBox">
+        <property name="visible">True</property>
+        <property name="orientation">vertical</property>
+        <property name="spacing">4</property>
+        <property name="valign">center</property>
+        <!-- Extension Logo -->
+        <child>
+          <object class="GtkBox" id="logoImage">
+            <property name="visible">True</property>
+            <property name="orientation">horizontal</property>
+            <property name="halign">center</property>
+          </object>
+        </child>
+        <!-- Extension Title -->
+        <child>
+          <object class="GtkLabel">
+            <property name="visible">True</property>
+            <property name="can-focus">True</property>
+            <property name="label" translatable="no">Shell Configurator</property>
+            <attributes>
+              <attribute name="weight" value="bold"/>
+              <attribute name="absolute-size" value="24576"/>
+            </attributes>
+          </object>
+        </child>
+        <!-- Extension version -->
+        <child>
+            <object class="GtkLabel" id="versionLabel">
+            <property name="visible">True</property>
+            <property name="can-focus">True</property>
+            <property name="label" translatable="no">{version}. {codename} {isDevelopment}</property>
+            <property name="justify">center</property>
+            <attributes>
+              <attribute name="weight" value="bold"/>
+            </attributes>
+          </object>
+        </child>
+        <!-- Current Shell Version -->
+        <child>
+          <object class="GtkLabel" id="shellVersionLabel">
+            <property name="visible">True</property>
+            <property name="can-focus">True</property>
+            <property name="label" translatable="no">Current GNOME Shell Versions: 3.x</property>
+            <property name="justify">center</property>
+            <attributes>
+              <attribute name="absolute-size" value="14336"/>
+            </attributes>
+          </object>
+        </child>
+      </object>
+    </child>
+    <!-- Extension Author -->
+    <child>
+      <object class="GtkBox" id="extensionAuthor">
+        <property name="visible">True</property>
+        <property name="orientation">vertical</property>
+        <property name="spacing">4</property>
+        <property name="halign">center</property>
+        <child>
+          <object class="GtkLabel">
+            <property name="visible">True</property>
+            <property name="can-focus">True</property>
+            <property name="label" translatable="yes">Developed and Maintained by:</property>
+            <property name="justify">center</property>
+          </object>
+        </child>
+        <child>
+          <object class="GtkLabel">
+            <property name="visible">True</property>
+            <property name="can-focus">True</property>
+            <property name="label" translatable="no">ADeswanta (AdvendraDeswanta)</property>
+            <property name="justify">center</property>
+          </object>
+        </child>
+      </object>
+    </child>
+    <child>
+      <object class="GtkBox">
+        <property name="visible">True</property>
+        <property name="orientation">vertical</property>
+        <property name="spacing">4</property>
+        <property name="halign">center</property>
+        <child>
+          <object class="GtkButton" id="linkExtensionWebsite">
+            <property name="visible">True</property>
+            <property name="can-focus">False</property>
+            <property name="receives-default">True</property>
+            <property name="label" translatable="yes">Visit Extension Website</property>
+            <property name="tooltip-text" translatable="no">https://gitlab.com/adeswantaTechs/shell-configurator</property>
+          </object>
+        </child>
+        <child>
+          <object class="GtkButton" id="linkExtensionReferences">
+            <property name="visible">True</property>
+            <property name="can-focus">False</property>
+            <property name="receives-default">True</property>
+            <property name="label" translatable="yes">Extension Wiki</property>
+            <property name="tooltip-text" translatable="no">https://gitlab.com/adeswantaTechs/shell-configurator/-/wikis/home</property>
+          </object>
+        </child>
+        <child>
+          <object class="GtkButton" id="linkExtensionReportBug">
+            <property name="visible">True</property>
+            <property name="can-focus">False</property>
+            <property name="receives-default">True</property>
+            <property name="label" translatable="yes">Report Issues</property>
+            <property name="tooltip-text" translatable="no">https://gitlab.com/adeswantaTechs/shell-configurator/-/issues</property>
+          </object>
+        </child>
+      </object>
+    </child>
+  </object>
+</interface>

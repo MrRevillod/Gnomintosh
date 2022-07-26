@@ -1,0 +1,26 @@
+/*
+ * No Top Panel
+ * It's usually when panel is hidden or panel moved to bottom When panel moved to bottom
+ */
+.sc-no-top-panel.bottom-panel .popup-menu.panel-menu {
+    margin-bottom: 0;
+}
+
+/*
+ * Hidden Workspace Switcher (for GNOME 3.38 below)
+ * Changing window picker width
+ */
+.sc-hidden-workspace-switcher-338 .window-picker {
+    width: 9999px;
+}
+
+/*
+ * Hidden Workspace Switcher (for GNOME 40 above)
+ * Make workspace thumbnails and it's indicator completely hidden/not shown
+ */
+.sc-hidden-workspace-switcher-40 .workspace-thumbnails,
+.sc-hidden-workspace-switcher-40 .workspace-thumbnail-indicator {
+    padding: 0;
+    margin: 0;
+    border: 0;
+}

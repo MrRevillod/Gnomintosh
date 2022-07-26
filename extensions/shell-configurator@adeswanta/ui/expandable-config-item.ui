@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<interface>
+  <requires lib="gtk+" version="3.24"/>
+  <template class="ExpandableConfigItem" parent="GtkBox">
+    <property name="visible">True</property>
+    <property name="can-focus">True</property>
+    <property name="orientation">vertical</property>
+    <child>
+      <object class="GtkBox">
+        <property name="visible">True</property>
+        <property name="can-focus">True</property>
+        <property name="valign">center</property>
+        <property name="margin-start">12</property>
+        <property name="margin-end">12</property>
+        <property name="margin-top">8</property>
+        <property name="margin-bottom">8</property>
+        <child>
+          <object class="GtkBox">
+            <property name="visible">True</property>
+            <property name="orientation">vertical</property>
+            <property name="hexpand">True</property>
+            <property name="valign">center</property>
+            <property name="spacing">4</property>
+            <child>
+              <object class="GtkLabel" id="configName">
+                <property name="visible">True</property>
+                <property name="can-focus">False</property>
+                <property name="halign">start</property>
+                <property name="hexpand">True</property>
+                <property name="label" translatable="no">Configuration Name</property>
+              </object>
+            </child>
+            <child>
+              <object class="GtkLabel" id="configDescription">
+                <property name="visible">True</property>
+                <property name="can-focus">False</property>
+                <property name="halign">fill</property>
+                <property name="wrap">True</property>
+                <property name="wrap-mode">word-char</property>
+                <property name="max-width-chars">0</property>
+                <property name="xalign">0.0</property>
+                <property name="label" translatable="no">Configuration Description</property>
+                <attributes>
+                  <attribute name="absolute-size" value="12288"/>
+                  <attribute name="foreground" value="#808080"/>
+                </attributes>
+              </object>
+            </child>
+          </object>
+        </child>
+        <child>
+          <object class="GtkBox" id="configContainer">
+            <property name="visible">True</property>
+            <property name="can-focus">True</property>
+            <property name="valign">center</property>
+          </object>
+        </child>
+        <!-- Dropdown Icon -->
+        <child>
+          <object class="GtkToggleButton" id="dropdownButton">
+            <property name="visible">True</property>
+            <child>
+              <object class="GtkImage">
+                <property name="visible">True</property>
+                <property name="icon_name">pan-down-symbolic</property>
+              </object>
+            </child>
+            <style>
+              <class name="flat"/>
+            </style>
+          </object>
+        </child>
+      </object>
+    </child>
+    <child>
+      <object class="GtkRevealer">
+        <property name="reveal-child"
+          bind-source="dropdownButton" bind-property="active"
+          bind-flags="sync-create">True</property>
+        <property name="visible">True</property>
+        <property name="vexpand">True</property>
+        <child>
+          <object class="GtkListBox" id="configs">
+            <property name="visible">True</property>
+            <property name="can-focus">True</property>
+            <property name="selection-mode">none</property>
+            <property name="activate-on-single-click">False</property>
+            <child>
+              <object class="GtkListBoxRow">
+                <property name="activatable">False</property>
+                <property name="selectable">False</property>
+                <child>
+                  <object class="GtkSeparator">
+                    <property name="visible">true</property>
+                  </object>
+                </child>
+              </object>
+            </child>
+          </object>
+        </child>
+      </object>
+    </child>
+  <!-- </object> -->
+  </template>
+</interface>

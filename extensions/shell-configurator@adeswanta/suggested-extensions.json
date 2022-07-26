@@ -1,0 +1,29 @@
+{
+  "extensions": [
+    {
+      "name": "Dash to Dock",
+      "ability": "Always show dash, Intellihide dash, customize dash",
+      "uri": "https://extensions.gnome.org/extension/307/dash-to-dock/"
+    },
+    {
+      "name": "Dock from Dash",
+      "ability": "Always show dash, Hide dash",
+      "uri": "https://extensions.gnome.org/extension/4703/dock-from-dash/"
+    },
+    {
+      "name": "Dash to Panel",
+      "ability": "Extend the dash, Intellihide dash, Multiple monitor support, Standalone shell panel",
+      "uri": "https://extensions.gnome.org/extension/1160/dash-to-panel/"
+    },
+    {
+      "name": "Vertical Overview",
+      "ability": "Change workspace orientation",
+      "uri": "https://extensions.gnome.org/extension/4144/vertical-overview/"
+    },
+    {
+      "name": "Avatar",
+      "ability": "Add account info to aggregate menu",
+      "uri": "https://extensions.gnome.org/extension/4782/avatar/"
+    }
+  ]
+}

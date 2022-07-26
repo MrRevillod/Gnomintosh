@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<interface>
+  <requires lib="gtk+" version="3.24"/>
+  <object class="GtkBox" id="welcomePage">
+    <property name="visible">True</property>
+    <property name="orientation">vertical</property>
+    <property name="spacing">32</property>
+    <property name="valign">center</property>
+    <child>
+      <object class="GtkBox">
+        <property name="visible">True</property>
+        <property name="orientation">vertical</property>
+        <property name="spacing">4</property>
+        <property name="valign">center</property>
+        <!-- Extension Title -->
+        <child>
+          <object class="GtkLabel">
+            <property name="visible">True</property>
+            <property name="can-focus">True</property>
+            <property name="label" translatable="no">Shell Configurator</property>
+            <attributes>
+              <attribute name="weight" value="bold"/>
+              <attribute name="absolute-size" value="20480"/>
+            </attributes>
+            </object>
+        </child>
+        <!-- Extension Message -->
+        <child>
+          <object class="GtkLabel">
+            <property name="visible">True</property>
+            <property name="can-focus">True</property>
+            <property name="label" translatable="yes">Manage your desktop like your own</property>
+            <attributes>
+              <attribute name="absolute-size" value="24576"/>
+            </attributes>
+            </object>
+        </child>
+      </object>
+    </child>
+    <!-- Extension Image -->
+    <child>
+      <object class="GtkBox" id="coverImage">
+        <property name="visible">True</property>
+        <property name="orientation">horizontal</property>
+        <property name="halign">center</property>
+      </object>
+    </child>
+    <!-- Development Message (if this extension is in Development) -->
+    <child>
+      <object class="GtkLabel" id="developmentMessage">
+        <property name="visible">False</property>
+        <property name="can-focus">True</property>
+        <property name="label" translatable="yes">This extension is in development, many features may unstable</property>
+        <property name="justify">center</property>
+        <attributes>
+          <attribute name="absolute-size" value="12288"/>
+        </attributes>
+      </object>
+    </child>
+  </object>
+</interface>
